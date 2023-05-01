@@ -5,4 +5,8 @@
 
 void createLuaVM();
 
+void doFile(const char* filePath);
+
+int getGlobalInt(const char *var);
+
 #endif

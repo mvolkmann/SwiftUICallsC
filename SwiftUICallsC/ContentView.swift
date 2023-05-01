@@ -7,7 +7,10 @@ struct ContentView: View {
         }
         .padding()
         .onAppear {
-            createLuaVM();
+            createLuaVM()
+            doFile("config.lua");
+            let score = getGlobalInt("score")
+            print("score =", score)
         }
     }
 }
