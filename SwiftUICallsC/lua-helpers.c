@@ -34,7 +34,13 @@ void callFunction(int inputs, int outputs) {
 }
 
 void doFile(const char* filePath) {
-    luaL_dofile(L, filePath);
+    printf("doFile: filePath = %s\n", filePath);
+    int status = luaL_dofile(L, filePath);
+    printf("doFile: status = %d\n", status);
+    if (status) {
+        const char *message = lua_tostring(L, -1);
+        printf("doFile: message = %s\n", message);
+    }
 }
 
 int getGlobalBoolean(const char *var) {

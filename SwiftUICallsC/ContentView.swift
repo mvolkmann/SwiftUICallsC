@@ -8,7 +8,9 @@ struct ContentView: View {
         .padding()
         .onAppear {
             createLuaVM()
-            doFile("config.lua");
+            doFile(
+                "/Users/volkmannm/Documents/dev/swiftui/SwiftUICallsC/SwiftUICallsC/config.lua"
+            )
             let score = getGlobalInt("score")
             print("score =", score)
         }
