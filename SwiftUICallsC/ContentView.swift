@@ -1,21 +1,14 @@
-//
-//  ContentView.swift
-//  SwiftUICallsC
-//
-//  Created by Mark Volkmann on 5/1/23.
-//
-
 import SwiftUI
 
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            Text("Factorial of 5 is \(factorial(5)).")
         }
         .padding()
+        .onAppear {
+            createLuaVM();
+        }
     }
 }
 
