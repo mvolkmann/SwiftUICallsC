@@ -1,4 +1,4 @@
 -- This doesn't work, but doesn't generate an error.
-print("Hello from Lua!")
+print("Hello from Lua again!")
 
-score = 19
+score = 21

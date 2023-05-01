@@ -14,7 +14,6 @@
 		1A54CE432A00160900ACB634 /* factorial.c in Sources */ = {isa = PBXBuildFile; fileRef = 1A54CE422A00160900ACB634 /* factorial.c */; };
 		1AAD679F2A005A12007559A3 /* lua-helpers.c in Sources */ = {isa = PBXBuildFile; fileRef = 1AAD679E2A005A12007559A3 /* lua-helpers.c */; };
 		1AAD67A82A006AE2007559A3 /* lua.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AAD67A72A006AE2007559A3 /* lua.xcframework */; };
-		1AAD67AB2A006FAF007559A3 /* config.lua in Resources */ = {isa = PBXBuildFile; fileRef = 1AAD67AA2A006FAF007559A3 /* config.lua */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -180,7 +179,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A54CE3A2A0015CC00ACB634 /* Preview Assets.xcassets in Resources */,
-				1AAD67AB2A006FAF007559A3 /* config.lua in Resources */,
 				1A54CE372A0015CC00ACB634 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
