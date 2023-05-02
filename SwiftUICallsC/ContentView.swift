@@ -16,6 +16,7 @@ struct ContentView: View {
     @State private var color = "black"
     @State private var greeting = ""
     @State private var message = ""
+    @State private var number = 0
 
     let lineHeight = 24
     let lines = 20
@@ -30,7 +31,17 @@ struct ContentView: View {
 
     var body: some View {
         VStack {
-            Text("Factorial of 5 is \(factorial(5)).")
+            VStack(alignment: .leading, spacing: 0) {
+                Stepper(
+                    "Number: \(number)",
+                    value: $number,
+                    in: 0 ... 10
+                )
+                Text(
+                    "The factorial of \(number) is \(factorial(Int32(number)))."
+                )
+            }
+
             Spacer()
 
             VStack(alignment: .leading, spacing: 0) {
