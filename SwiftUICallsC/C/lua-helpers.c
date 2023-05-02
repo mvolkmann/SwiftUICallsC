@@ -210,7 +210,7 @@ const char* getStackString(int i) {
     }
 }
 
-void printStack() {
+void printStack(void) {
     int top = lua_gettop(L);
     if (top == 0) {
         printf("Lua stack is empty.\n");
@@ -225,7 +225,7 @@ void printStack() {
 }
 
 // This assumes that the table is on the top of the stack.
-void printTable() {
+void printTable(void) {
     printf("table contains:\n");
     lua_pushnil(L); // initial key
     //
