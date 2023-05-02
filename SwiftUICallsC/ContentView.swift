@@ -4,10 +4,16 @@ struct ContentView: View {
     @State private var code = """
     x = 3
     y = 4
-    color = x >= y and \"red\" or \"green\"
-    greeting = \"Hello!\"
+    if x >= y then
+      color = "green"
+    else
+      color = "red"
+    end
+    -- color = x >= y and "red" or "green"
+
+    greeting = "Hello!"
     """
-    @State private var color = ""
+    @State private var color = "black"
     @State private var greeting = ""
     @State private var message = ""
 
