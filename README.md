@@ -6,7 +6,7 @@ This is a SwiftUI app that demonstrates:
 - enabling users to enter and execute Lua code
 - updating the UI based on data obtained from Lua global variables
 
-<img alt="app screenshot" src="./SwiftUICallsC.png" />
+<img alt="app screenshot" src="./SwiftUICallsC.png" style="height: 200px" />
 
 For information about Lua and embedding it in C applications,
 see my blog page on [Lua](https://mvolkmann.github.io/blog/topics/#/blog/lua/).
