@@ -84,9 +84,8 @@ int getGlobalInt(const char *var) {
 
 const char* getGlobalString(const char *var) {
     lua_getglobal(L, var); // pushes onto stack
-    if (!lua_isstring(L, -1)) {
-        error("expected %s to be a string\n", var);
-    }
+    if (!lua_isstring(L, -1)) { return ""; }
+    // error("expected %s to be a string\n", var);
     const char *result = lua_tostring(L, -1);
     lua_pop(L, 1); // pops from stack
     return result;

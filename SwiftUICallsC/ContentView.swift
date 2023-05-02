@@ -3,18 +3,6 @@ import SwiftUI
 struct ContentView: View {
     @Binding var document: TextFile
 
-    @State private var code = """
-    x = 3
-    y = 4
-    if x >= y then
-      color = "green"
-    else
-      color = "red"
-    end
-    -- color = x >= y and "red" or "green"
-
-    greeting = "Hello!"
-    """
     @State private var color = "black"
     @State private var greeting = ""
     @State private var message = ""
@@ -24,11 +12,24 @@ struct ContentView: View {
     let lines = 20
 
     func header(_ text: String) -> some View {
-        print("header: text = \(text)")
         return Text(text + ":")
             .font(.headline)
             // See colors defined in Assets.xcassets.
             .foregroundColor(Color(color))
+    }
+
+    func cleanCode(_: String) -> String {
+        var text = document.text
+        // TODO: Why do I need to call this twice for each quote type?
+        text = text
+            .replacingOccurrences(
+                of: "“",
+                with: "\""
+            ) // replaces smart quotes
+        text = text.replacingOccurrences(of: "”", with: "\"")
+        text = text.replacingOccurrences(of: "‘", with: "'")
+        text = text.replacingOccurrences(of: "’", with: "'")
+        return text
     }
 
     var body: some View {
@@ -48,34 +49,44 @@ struct ContentView: View {
 
             VStack(alignment: .leading, spacing: 0) {
                 header("Lua code")
-                /*
-                 TextEditor(text: $code)
-                     .lineLimit(lines)
-                     .frame(
-                         maxWidth: .infinity,
-                         maxHeight: CGFloat(lines * lineHeight)
-                     )
-                     .overlay(
-                         RoundedRectangle(cornerRadius: 5)
-                             .stroke(Color(UIColor.lightGray))
-                     )
-                 */
                 TextEditor(text: $document.text)
+                    .autocapitalization(.none)
+                    .disableAutocorrection(true)
+                    .lineLimit(lines)
+                    .frame(
+                        maxWidth: .infinity,
+                        maxHeight: CGFloat(lines * lineHeight)
+                    )
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 5)
+                            .stroke(Color(UIColor.lightGray))
+                    )
             }
 
             Button("Execute") {
+                let text = cleanCode(document.text)
+
                 // This set when there is an error
                 // loading or executing a file of Lua code.
                 // See callFunction in lua-helpers.c.
                 // message = String(cString: doString(code))
-                message = String(cString: doString(document.text))
+                message = String(cString: doString(text))
 
                 // These are set by the Lua code in "code" String above.
-                color = String(cString: getGlobalString("color"))
-                greeting = String(cString: getGlobalString("greeting"))
+                if let cString = getGlobalString("color") {
+                    color = String(cString: cString)
+                } else {
+                    color = "black"
+                }
+
+                if let cString = getGlobalString("greeting") {
+                    greeting = String(cString: cString)
+                } else {
+                    greeting = ""
+                }
             }
             .buttonStyle(.borderedProminent)
-            .disabled(code.isEmpty)
+            .disabled(document.text.isEmpty)
 
             if !message.isEmpty {
                 Text(message).foregroundColor(.red)
