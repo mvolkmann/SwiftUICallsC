@@ -1,9 +1,11 @@
 import SwiftUI
 
 struct ContentView: View {
+    private static let defaultColor = "black"
+
     @Binding var document: TextFile
 
-    @State private var color = "black"
+    @State private var color = defaultColor
     @State private var greeting = ""
     @State private var message = ""
     @State private var number = 0
@@ -20,15 +22,19 @@ struct ContentView: View {
 
     func cleanCode(_: String) -> String {
         var text = document.text
-        // TODO: Why do I need to call this twice for each quote type?
-        text = text
-            .replacingOccurrences(
-                of: "“",
-                with: "\""
-            ) // replaces smart quotes
-        text = text.replacingOccurrences(of: "”", with: "\"")
-        text = text.replacingOccurrences(of: "‘", with: "'")
-        text = text.replacingOccurrences(of: "’", with: "'")
+
+        // These are NOT the same!
+        let openDouble = "“"
+        let closeDouble = "”"
+        text = text.replacingOccurrences(of: openDouble, with: "\"")
+        text = text.replacingOccurrences(of: closeDouble, with: "\"")
+
+        // These are NOT the same!
+        let openSingle = "‘"
+        let closeSingle = "’"
+        text = text.replacingOccurrences(of: openSingle, with: "'")
+        text = text.replacingOccurrences(of: closeSingle, with: "'")
+
         return text
     }
 
@@ -65,6 +71,7 @@ struct ContentView: View {
 
             Button("Execute") {
                 let text = cleanCode(document.text)
+                print("text =", text)
 
                 // This set when there is an error
                 // loading or executing a file of Lua code.
@@ -75,8 +82,9 @@ struct ContentView: View {
                 // These are set by the Lua code in "code" String above.
                 if let cString = getGlobalString("color") {
                     color = String(cString: cString)
+                    if color.isEmpty { color = Self.defaultColor }
                 } else {
-                    color = "black"
+                    color = Self.defaultColor
                 }
 
                 if let cString = getGlobalString("greeting") {
