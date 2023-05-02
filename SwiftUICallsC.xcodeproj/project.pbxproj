@@ -12,6 +12,7 @@
 		1A54CE372A0015CC00ACB634 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A54CE362A0015CC00ACB634 /* Assets.xcassets */; };
 		1A54CE3A2A0015CC00ACB634 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A54CE392A0015CC00ACB634 /* Preview Assets.xcassets */; };
 		1A54CE432A00160900ACB634 /* factorial.c in Sources */ = {isa = PBXBuildFile; fileRef = 1A54CE422A00160900ACB634 /* factorial.c */; };
+		1A6FEB192A01817000132590 /* TextFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6FEB182A01817000132590 /* TextFile.swift */; };
 		1AAD679F2A005A12007559A3 /* lua-helpers.c in Sources */ = {isa = PBXBuildFile; fileRef = 1AAD679E2A005A12007559A3 /* lua-helpers.c */; };
 		1AAD67A82A006AE2007559A3 /* lua.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AAD67A72A006AE2007559A3 /* lua.xcframework */; };
 /* End PBXBuildFile section */
@@ -25,6 +26,7 @@
 		1A54CE402A00160900ACB634 /* SwiftUICallsC-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftUICallsC-Bridging-Header.h"; sourceTree = "<group>"; };
 		1A54CE412A00160900ACB634 /* factorial.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = factorial.h; sourceTree = "<group>"; };
 		1A54CE422A00160900ACB634 /* factorial.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = factorial.c; sourceTree = "<group>"; };
+		1A6FEB182A01817000132590 /* TextFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFile.swift; sourceTree = "<group>"; };
 		1AAD679B2A005850007559A3 /* liblua.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblua.a; path = SwiftUICallsC/lib/liblua.a; sourceTree = "<group>"; };
 		1AAD679D2A005A12007559A3 /* lua-helpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "lua-helpers.h"; sourceTree = "<group>"; };
 		1AAD679E2A005A12007559A3 /* lua-helpers.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "lua-helpers.c"; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 			children = (
 				1A54CE322A0015CA00ACB634 /* SwiftUICallsCApp.swift */,
 				1A54CE342A0015CA00ACB634 /* ContentView.swift */,
+				1A6FEB182A01817000132590 /* TextFile.swift */,
 				1A54CE362A0015CC00ACB634 /* Assets.xcassets */,
 				1AAD67AC2A00AD03007559A3 /* C */,
 				1AAD67A42A006965007559A3 /* Frameworks */,
@@ -197,6 +200,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AAD679F2A005A12007559A3 /* lua-helpers.c in Sources */,
+				1A6FEB192A01817000132590 /* TextFile.swift in Sources */,
 				1A54CE352A0015CA00ACB634 /* ContentView.swift in Sources */,
 				1A54CE432A00160900ACB634 /* factorial.c in Sources */,
 				1A54CE332A0015CA00ACB634 /* SwiftUICallsCApp.swift in Sources */,
@@ -339,6 +343,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportsDocumentBrowser = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -372,6 +377,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportsDocumentBrowser = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

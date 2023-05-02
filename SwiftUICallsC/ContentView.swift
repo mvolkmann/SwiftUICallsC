@@ -1,6 +1,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    @Binding var document: TextFile
+
     @State private var code = """
     x = 3
     y = 4
@@ -46,23 +48,27 @@ struct ContentView: View {
 
             VStack(alignment: .leading, spacing: 0) {
                 header("Lua code")
-                TextEditor(text: $code)
-                    .lineLimit(lines)
-                    .frame(
-                        maxWidth: .infinity,
-                        maxHeight: CGFloat(lines * lineHeight)
-                    )
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 5)
-                            .stroke(Color(UIColor.lightGray))
-                    )
+                /*
+                 TextEditor(text: $code)
+                     .lineLimit(lines)
+                     .frame(
+                         maxWidth: .infinity,
+                         maxHeight: CGFloat(lines * lineHeight)
+                     )
+                     .overlay(
+                         RoundedRectangle(cornerRadius: 5)
+                             .stroke(Color(UIColor.lightGray))
+                     )
+                 */
+                TextEditor(text: $document.text)
             }
 
             Button("Execute") {
                 // This set when there is an error
                 // loading or executing a file of Lua code.
                 // See callFunction in lua-helpers.c.
-                message = String(cString: doString(code))
+                // message = String(cString: doString(code))
+                message = String(cString: doString(document.text))
 
                 // These are set by the Lua code in "code" String above.
                 color = String(cString: getGlobalString("color"))
@@ -100,11 +106,5 @@ struct ContentView: View {
              print("score =", score)
              */
         }
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
     }
 }
