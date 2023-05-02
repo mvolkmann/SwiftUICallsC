@@ -43,6 +43,13 @@ void doFile(const char* filePath) {
     }
 }
 
+// If there is an error, a status message is returned.
+// Otherwise nil is returned.
+const char* doString(const char* code) {
+    int status = luaL_dostring(L, code);
+    return status ? lua_tostring(L, -1) : "";
+}
+
 int getGlobalBoolean(const char *var) {
     lua_getglobal(L, var); // pushes onto stack
     if (!lua_isboolean(L, -1)) {
@@ -70,7 +77,7 @@ int getGlobalInt(const char *var) {
     if (!lua_isinteger(L, -1)) {
         error("expected %s to be an integer\n", var);
     }
-    int result = lua_tointeger(L, -1);
+    int result = (int) lua_tointeger(L, -1);
     lua_pop(L, 1); // pops from stack
     return result;
 }

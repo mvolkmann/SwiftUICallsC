@@ -33,7 +33,6 @@
 		1AAD67A22A005CAC007559A3 /* lua.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lua.h; sourceTree = "<group>"; };
 		1AAD67A32A005CAC007559A3 /* lauxlib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lauxlib.h; sourceTree = "<group>"; };
 		1AAD67A72A006AE2007559A3 /* lua.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = lua.xcframework; sourceTree = "<group>"; };
-		1AAD67AA2A006FAF007559A3 /* config.lua */ = {isa = PBXFileReference; lastKnownFileType = text; path = config.lua; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,16 +67,12 @@
 		1A54CE312A0015CA00ACB634 /* SwiftUICallsC */ = {
 			isa = PBXGroup;
 			children = (
-				1AAD67A42A006965007559A3 /* Frameworks */,
-				1AAD67982A00574E007559A3 /* include */,
 				1A54CE322A0015CA00ACB634 /* SwiftUICallsCApp.swift */,
 				1A54CE342A0015CA00ACB634 /* ContentView.swift */,
-				1A54CE412A00160900ACB634 /* factorial.h */,
-				1A54CE422A00160900ACB634 /* factorial.c */,
-				1AAD679E2A005A12007559A3 /* lua-helpers.c */,
-				1AAD679D2A005A12007559A3 /* lua-helpers.h */,
-				1AAD67AA2A006FAF007559A3 /* config.lua */,
 				1A54CE362A0015CC00ACB634 /* Assets.xcassets */,
+				1AAD67AC2A00AD03007559A3 /* C */,
+				1AAD67A42A006965007559A3 /* Frameworks */,
+				1AAD67982A00574E007559A3 /* include */,
 				1A54CE382A0015CC00ACB634 /* Preview Content */,
 				1A54CE402A00160900ACB634 /* SwiftUICallsC-Bridging-Header.h */,
 			);
@@ -95,7 +90,9 @@
 		1AAD67982A00574E007559A3 /* include */ = {
 			isa = PBXGroup;
 			children = (
+				1A54CE412A00160900ACB634 /* factorial.h */,
 				1AAD67A32A005CAC007559A3 /* lauxlib.h */,
+				1AAD679D2A005A12007559A3 /* lua-helpers.h */,
 				1AAD67A22A005CAC007559A3 /* lua.h */,
 				1AAD67A02A005CAC007559A3 /* luaconf.h */,
 				1AAD67A12A005CAC007559A3 /* lualib.h */,
@@ -117,6 +114,15 @@
 				1AAD67A72A006AE2007559A3 /* lua.xcframework */,
 			);
 			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		1AAD67AC2A00AD03007559A3 /* C */ = {
+			isa = PBXGroup;
+			children = (
+				1A54CE422A00160900ACB634 /* factorial.c */,
+				1AAD679E2A005A12007559A3 /* lua-helpers.c */,
+			);
+			path = C;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
