@@ -2,6 +2,7 @@
 
 This is a SwiftUI app that demonstrates:
 
+- defining and calling C functions in a SwiftUI project
 - embedding the Lua interpreter in a SwiftUI app
 - enabling users to enter and execute Lua code
 - updating the UI based on data obtained from Lua global variables
