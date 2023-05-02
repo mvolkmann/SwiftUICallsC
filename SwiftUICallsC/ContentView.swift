@@ -59,9 +59,13 @@ struct ContentView: View {
             }
 
             Button("Execute") {
+                // This set when there is an error
+                // loading or executing a file of Lua code.
+                // See callFunction in lua-helpers.c.
                 message = String(cString: doString(code))
+
+                // These are set by the Lua code in "code" String above.
                 color = String(cString: getGlobalString("color"))
-                print("\(#fileID) \(#function) color =", color)
                 greeting = String(cString: getGlobalString("greeting"))
             }
             .buttonStyle(.borderedProminent)
