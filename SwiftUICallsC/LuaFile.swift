@@ -3,6 +3,8 @@ import UniformTypeIdentifiers
 
 extension UTType {
     // Use exportedAs for file types invented by you.
+    // This "Uniform Type Identifier" was found at
+    // https://gist.github.com/rmorey/b8d1b848086bdce026a9f57732a3b858.
     static let luaSource = UTType(importedAs: "org.lua.lua-source")
 }
 
