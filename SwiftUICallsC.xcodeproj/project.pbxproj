@@ -88,7 +88,6 @@
 				1A1A62562A057C2E00E2203C /* lua-128.png */,
 				1A6E32302A0547B800C15835 /* lua-32.icns */,
 				1AAD67AC2A00AD03007559A3 /* C */,
-				1A6FEB1D2A0192D200132590 /* Extensions */,
 				1AAD67A42A006965007559A3 /* Frameworks */,
 				1AAD67982A00574E007559A3 /* include */,
 				1A54CE382A0015CC00ACB634 /* Preview Content */,
@@ -103,13 +102,6 @@
 				1A54CE392A0015CC00ACB634 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		1A6FEB1D2A0192D200132590 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 		1AAD67982A00574E007559A3 /* include */ = {
