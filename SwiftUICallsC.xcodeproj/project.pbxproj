@@ -7,17 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A1A62572A057C2E00E2203C /* lua-128.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A1A62562A057C2E00E2203C /* lua-128.png */; };
 		1A54CE332A0015CA00ACB634 /* SwiftUICallsCApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A54CE322A0015CA00ACB634 /* SwiftUICallsCApp.swift */; };
 		1A54CE352A0015CA00ACB634 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A54CE342A0015CA00ACB634 /* ContentView.swift */; };
 		1A54CE372A0015CC00ACB634 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A54CE362A0015CC00ACB634 /* Assets.xcassets */; };
 		1A54CE3A2A0015CC00ACB634 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A54CE392A0015CC00ACB634 /* Preview Assets.xcassets */; };
 		1A54CE432A00160900ACB634 /* factorial.c in Sources */ = {isa = PBXBuildFile; fileRef = 1A54CE422A00160900ACB634 /* factorial.c */; };
-		1A6FEB192A01817000132590 /* TextFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6FEB182A01817000132590 /* TextFile.swift */; };
+		1A6E32312A0547B800C15835 /* lua-32.icns in Resources */ = {isa = PBXBuildFile; fileRef = 1A6E32302A0547B800C15835 /* lua-32.icns */; };
+		1A6FEB192A01817000132590 /* LuaFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6FEB182A01817000132590 /* LuaFile.swift */; };
+		1A6FEB222A045BFF00132590 /* lua-1024.icns in Resources */ = {isa = PBXBuildFile; fileRef = 1A6FEB212A045BFF00132590 /* lua-1024.icns */; };
 		1AAD679F2A005A12007559A3 /* lua-helpers.c in Sources */ = {isa = PBXBuildFile; fileRef = 1AAD679E2A005A12007559A3 /* lua-helpers.c */; };
 		1AAD67A82A006AE2007559A3 /* lua.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AAD67A72A006AE2007559A3 /* lua.xcframework */; };
+		1AC91D742A057A5C008176B6 /* lua-128.icns in Resources */ = {isa = PBXBuildFile; fileRef = 1AC91D732A057A5C008176B6 /* lua-128.icns */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A1A62562A057C2E00E2203C /* lua-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lua-128.png"; sourceTree = "<group>"; };
 		1A54CE2F2A0015CA00ACB634 /* SwiftUICallsC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUICallsC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A54CE322A0015CA00ACB634 /* SwiftUICallsCApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUICallsCApp.swift; sourceTree = "<group>"; };
 		1A54CE342A0015CA00ACB634 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -26,7 +31,10 @@
 		1A54CE402A00160900ACB634 /* SwiftUICallsC-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftUICallsC-Bridging-Header.h"; sourceTree = "<group>"; };
 		1A54CE412A00160900ACB634 /* factorial.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = factorial.h; sourceTree = "<group>"; };
 		1A54CE422A00160900ACB634 /* factorial.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = factorial.c; sourceTree = "<group>"; };
-		1A6FEB182A01817000132590 /* TextFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFile.swift; sourceTree = "<group>"; };
+		1A6E32302A0547B800C15835 /* lua-32.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = "lua-32.icns"; sourceTree = "<group>"; };
+		1A6FEB182A01817000132590 /* LuaFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuaFile.swift; sourceTree = "<group>"; };
+		1A6FEB202A044CC200132590 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		1A6FEB212A045BFF00132590 /* lua-1024.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = "lua-1024.icns"; sourceTree = "<group>"; };
 		1AAD679B2A005850007559A3 /* liblua.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblua.a; path = SwiftUICallsC/lib/liblua.a; sourceTree = "<group>"; };
 		1AAD679D2A005A12007559A3 /* lua-helpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "lua-helpers.h"; sourceTree = "<group>"; };
 		1AAD679E2A005A12007559A3 /* lua-helpers.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "lua-helpers.c"; sourceTree = "<group>"; };
@@ -35,6 +43,7 @@
 		1AAD67A22A005CAC007559A3 /* lua.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lua.h; sourceTree = "<group>"; };
 		1AAD67A32A005CAC007559A3 /* lauxlib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lauxlib.h; sourceTree = "<group>"; };
 		1AAD67A72A006AE2007559A3 /* lua.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = lua.xcframework; sourceTree = "<group>"; };
+		1AC91D732A057A5C008176B6 /* lua-128.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = "lua-128.icns"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,10 +78,15 @@
 		1A54CE312A0015CA00ACB634 /* SwiftUICallsC */ = {
 			isa = PBXGroup;
 			children = (
+				1A6FEB202A044CC200132590 /* Info.plist */,
 				1A54CE322A0015CA00ACB634 /* SwiftUICallsCApp.swift */,
 				1A54CE342A0015CA00ACB634 /* ContentView.swift */,
-				1A6FEB182A01817000132590 /* TextFile.swift */,
+				1A6FEB182A01817000132590 /* LuaFile.swift */,
 				1A54CE362A0015CC00ACB634 /* Assets.xcassets */,
+				1A6FEB212A045BFF00132590 /* lua-1024.icns */,
+				1AC91D732A057A5C008176B6 /* lua-128.icns */,
+				1A1A62562A057C2E00E2203C /* lua-128.png */,
+				1A6E32302A0547B800C15835 /* lua-32.icns */,
 				1AAD67AC2A00AD03007559A3 /* C */,
 				1A6FEB1D2A0192D200132590 /* Extensions */,
 				1AAD67A42A006965007559A3 /* Frameworks */,
@@ -195,7 +209,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A1A62572A057C2E00E2203C /* lua-128.png in Resources */,
+				1AC91D742A057A5C008176B6 /* lua-128.icns in Resources */,
+				1A6FEB222A045BFF00132590 /* lua-1024.icns in Resources */,
 				1A54CE3A2A0015CC00ACB634 /* Preview Assets.xcassets in Resources */,
+				1A6E32312A0547B800C15835 /* lua-32.icns in Resources */,
 				1A54CE372A0015CC00ACB634 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -208,7 +226,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AAD679F2A005A12007559A3 /* lua-helpers.c in Sources */,
-				1A6FEB192A01817000132590 /* TextFile.swift in Sources */,
+				1A6FEB192A01817000132590 /* LuaFile.swift in Sources */,
 				1A54CE352A0015CA00ACB634 /* ContentView.swift in Sources */,
 				1A54CE432A00160900ACB634 /* factorial.c in Sources */,
 				1A54CE332A0015CA00ACB634 /* SwiftUICallsCApp.swift in Sources */,
@@ -346,6 +364,8 @@
 				DEVELOPMENT_TEAM = 4BG3523GAZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwiftUICallsC/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -380,6 +400,8 @@
 				DEVELOPMENT_TEAM = 4BG3523GAZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwiftUICallsC/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

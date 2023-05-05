@@ -8,8 +8,8 @@ struct SwiftUICallsCApp: App {
              ContentView()
          }
          */
-        DocumentGroup(newDocument: TextFile()) { file in
-            ContentView(document: file.$document)
+        DocumentGroup(newDocument: LuaFile()) { file in
+            ContentView(luaFile: file.$document)
         }
     }
 }

@@ -3,7 +3,7 @@ import SwiftUI
 struct ContentView: View {
     private static let defaultColor = "black"
 
-    @Binding var document: TextFile
+    @Binding var luaFile: LuaFile
 
     @State private var color = defaultColor
     @State private var greeting = ""
@@ -21,7 +21,7 @@ struct ContentView: View {
     }
 
     func cleanCode(_: String) -> String {
-        var text = document.text
+        var text = luaFile.code
 
         // These are NOT the same!
         let openDouble = "“"
@@ -55,7 +55,7 @@ struct ContentView: View {
 
             VStack(alignment: .leading, spacing: 0) {
                 header("Lua code")
-                TextEditor(text: $document.text)
+                TextEditor(text: $luaFile.code)
                     .autocapitalization(.none)
                     .disableAutocorrection(true)
                     .lineLimit(lines)
@@ -63,21 +63,16 @@ struct ContentView: View {
                         maxWidth: .infinity,
                         maxHeight: CGFloat(lines * lineHeight)
                     )
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 5)
-                            .stroke(Color(UIColor.lightGray))
-                    )
+                    .border(.gray)
             }
 
             Button("Execute") {
-                let text = cleanCode(document.text)
-                print("text =", text)
+                let luaCode = cleanCode(luaFile.code)
 
                 // This set when there is an error
                 // loading or executing a file of Lua code.
                 // See callFunction in lua-helpers.c.
-                // message = String(cString: doString(code))
-                message = String(cString: doString(text))
+                message = String(cString: doString(luaCode))
 
                 // These are set by the Lua code in "code" String above.
                 if let cString = getGlobalString("color") {
@@ -94,7 +89,7 @@ struct ContentView: View {
                 }
             }
             .buttonStyle(.borderedProminent)
-            .disabled(document.text.isEmpty)
+            .disabled(luaFile.code.isEmpty)
 
             if !message.isEmpty {
                 Text(message).foregroundColor(.red)
